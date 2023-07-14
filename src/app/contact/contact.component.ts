@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,7 @@ export class ContactComponent {
   phoneno:string = '';
   message:string = '';
   hideMessage = true;
+  serverURL = environment.server;
 
   constructor(private http:HttpClient){}
 
@@ -26,7 +28,7 @@ export class ContactComponent {
         "Message": this.message
       }
     };
-    this.http.post<any>('http://localhost:1337/api/leads', formdata).subscribe( res => {
+    this.http.post<any>(this.serverURL + '/api/leads', formdata).subscribe( res => {
       console.log(res);
       if(res.data === null){
 
