@@ -1,4 +1,36 @@
 <div class="banner d-flex justify-content-center align-items-center" style="background-image: url('http://localhost:1337{{ data.data.attributes.BannerImage.data.attributes.formats.large.url }}')">
+  <img src="/assets/loading.gif" *ngIf="loading">
   <h1>{{ data.data.attributes.BannerText }}</h1>
+</div>
+
+<div class="container">
+  <!-- Lightbox -->
+  <!-- <a href="https://unsplash.it/1200/768.jpg?image=250" data-toggle="lightbox" data-caption="This describes the image">
+    <img src="https://unsplash.it/600.jpg?image=250" class="img-fluid my-lightbox-toggle">
+  </a> -->
+
+
+  <div class="row">
+    <a href="/assets/b1.jpg" data-toggle="lightbox" data-gallery="example-gallery1" class="col-sm-4">
+      <img src="/assets/b1.jpg" class="img-fluid my-lightbox-toggle">
+    </a>
+    <a href="/assets/b2.jpg" data-toggle="lightbox" data-gallery="example-gallery1" class="col-sm-4">
+      <img src="/assets/b2.jpg" class="img-fluid my-lightbox-toggle">
+    </a>
+    <a href="/assets/b3.jpg" data-toggle="lightbox" data-gallery="example-gallery1" class="col-sm-4">
+      <img src="/assets/b3.jpg" class="img-fluid my-lightbox-toggle">
+    </a>
+  </div>
+  <div class="row">
+    <a href="/assets/b4.jpg" data-toggle="lightbox" data-gallery="example-gallery1" class="col-sm-4">
+      <img src="/assets/b4.jpg" class="img-fluid my-lightbox-toggle">
+    </a>
+    <a href="/assets/b5.jpeg" data-toggle="lightbox" data-gallery="example-gallery1" class="col-sm-4">
+      <img src="/assets/b5.jpeg" class="img-fluid my-lightbox-toggle">
+    </a>
+    <a href="/assets/b1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="/assets/b1.jpg" class="img-fluid my-lightbox-toggle">
+    </a>
+  </div>
 </div>
 

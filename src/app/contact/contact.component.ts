@@ -16,6 +16,7 @@ export class ContactComponent {
   message:string = '';
   hideMessage = true;
   serverURL = environment.server;
+  dateToday = new Date();
 
   constructor(private http:HttpClient, private recaptchaV3Service: ReCaptchaV3Service){}
 
